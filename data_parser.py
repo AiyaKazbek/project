@@ -23,14 +23,17 @@ def dict1(lines):
     list1=[]
     list2=[]
     for line in lines:
-        words = line[:-1].split(',')
+        item = line[:-1].split(',')
         if line.startswith('Student'):
-            diction={'class':words[0],'name':words[1],'lastname':words[2],'age':words[3],'rost':words[4],'score_m':int(words[5]),'score_h':int(words[6]),'score_p':int(words[7])}
+            diction={'class':item[0],'name':item[1],'lastname':item[2],'age':item[3],'rost':item[4],'score_m':int(item[5]),'score_h':int(item[6]),'score_p':int(item[7])}
             list1.append(diction)
-    for word in words[5:]:
+	#listTeacher
+        words = line[:-1].split(',')
+        for word in words[5:]:
             if word!='-' and line.startswith('Teacher'):
                 diction={'class':words[0],'name':words[1],'lastname':words[2],'age':words[3],'rost':words[4],'predmet':word}
                 list2.append(diction)
+    
     return list1,list2
 
 #def dict2(lines):
@@ -49,4 +52,4 @@ def dict1(lines):
 if __name__=="__main__":
     text=data_loader("class.txt")
     #words=get_words(text)
-    print(dict2(text))
+    print(dict1(text))
