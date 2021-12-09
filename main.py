@@ -10,7 +10,7 @@ listm=[]
 listh=[]
 listp=[]
 
-print(list1)
+#print(list1)
 for x in range(len(list1)):
 	print(x)
 	if list1[x]['class']=='Student':
@@ -23,7 +23,7 @@ for x in range(len(list1)):
 	print('avr=',sum/3)
 	print(i.print_info())
 for x in range(len(list2)):
-	print(x)
+	#print(x)
 	if list2[x]['class']=='Teacher':
 		l=cl.Teacher(list2[x]['name'],list2[x]['lastname'],list2[x]['age'],list2[x]['rost'],list2[x]['predmet'])
 
